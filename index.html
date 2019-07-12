@@ -20,12 +20,16 @@
     handelClick(e){
       console.log(e)
     }
+    handleCopy(e){
+      console.log("Try being original for once")
+    }
     render(){
       return (
         <div className ='app-component'>
               <h1> HEllo </h1>
               <p>{ this.state.name}</p>
               <button onClick= {this.handelClick}> click me</button>
+              <p onCopy={this.handleCopy}>what we think, we become</p>
 
         </div>
 
