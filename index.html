@@ -17,15 +17,15 @@
       name: 'Sumit',
       age: 26
     }
-    handelClick(){
-      
+    handelClick(e){
+      console.log(e)
     }
     render(){
       return (
         <div className ='app-component'>
               <h1> HEllo </h1>
               <p>{ this.state.name}</p>
-
+              <button onClick= {this.handelClick}> click me</button>
 
         </div>
 
