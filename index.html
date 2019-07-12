@@ -17,12 +17,28 @@
       name: 'Sumit',
       age: 26
     }
+    // the arrow function will bind the value of 'this' to inside this
+    handelClick =(e)=>{
+      console.log(e)
+      console.log(this.state)
+      // changing the state
+
+      this.setState({
+        name:'Prasad'
+      })
+    }
+
     handelClick(e){
       console.log(e)
+      // here this will not work as the context of this is lost when method call from template
+      console.log(this.state)
     }
+
+
     handleCopy(e){
       console.log("Try being original for once")
     }
+    // React initialize the contex of this in render by default
     render(){
       return (
         <div className ='app-component'>
